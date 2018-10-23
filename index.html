@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.production.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/create-react-class@15.6.3/create-react-class.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prop-types/15.6.2/prop-types.min.js"></script>
+    <script src="https://unpkg.com/react-addons-pure-render-mixin/react-addons-pure-render-mixin.min.js"></script>
+    <script src="components/data.js"></script>
+    <script src="components/excel.js"></script>
+    <style>
+      @import url('css/global.css');
+    </style>
+    <script type="text/javascript">
+    var excel = React.createFactory(Excel);
+    let myReactExcelApp = ReactDOM.render(
+      excel({ headers, initialData: data }),
+      document.getElementById("app")
+    );
+</script>
+  </body>
+</html>
