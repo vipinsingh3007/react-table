@@ -3,6 +3,8 @@
 
 var Excel = createReactClass({
   displayName: "Excel",
+  name: "Excel",
+  mixins: [logMixin],
   render: function() {
     return React.createElement(
       "table",
